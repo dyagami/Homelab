@@ -1,0 +1,13 @@
+Klan.zone.+008+57005.key - KSK
+
+Created: 20240126004140 (Fri Jan 26 00:41:40 2024)
+Publish: 20240126004140 (Fri Jan 26 00:41:40 2024)
+Activate: 20240126004140 (Fri Jan 26 00:41:40 2024)
+
+Klan.zone.+008+54258.key - ZSK
+
+Created: 20240126004123 (Fri Jan 26 00:41:23 2024)
+Publish: 20240126004123 (Fri Jan 26 00:41:23 2024)
+Activate: 20240126004123 (Fri Jan 26 00:41:23 2024)
+
+dnssec-signzone -o lan -N increment -e 20241231235959 -k Klan.+008+65234.key lan.zone Klan.+008+15180.key

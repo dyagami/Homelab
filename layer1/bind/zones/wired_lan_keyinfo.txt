@@ -1,0 +1,21 @@
+Kwired.lan.+008+15979 - KSK
+Created: 20240125232055 (Thu Jan 25 23:20:55 2024)
+Publish: 20240125232055 (Thu Jan 25 23:20:55 2024)
+Activate: 20240125232055 (Thu Jan 25 23:20:55 2024)
+
+Kwired.lan.+008+63324.key - ZSK
+Created: 20240125232030 (Thu Jan 25 23:20:30 2024)
+Publish: 20240125232030 (Thu Jan 25 23:20:30 2024)
+Activate: 20240125232030 (Thu Jan 25 23:20:30 2024)
+
+K0.168.192.in-addr.arpa.+008+41411.key - KSK
+Created: 20240125233852 (Thu Jan 25 23:38:52 2024)
+Publish: 20240125233852 (Thu Jan 25 23:38:52 2024)
+Activate: 20240125233852 (Thu Jan 25 23:38:52 2024)
+
+K0.168.192.in-addr.arpa.+008+59905.key - ZSK
+Created: 20240125233836 (Thu Jan 25 23:38:36 2024)
+Publish: 20240125233836 (Thu Jan 25 23:38:36 2024)
+Activate: 20240125233836 (Thu Jan 25 23:38:36 2024)
+
+dnssec-signzone -o wired.lan -e 20241231235959 -N increment -k Kwired.lan.+008+15979.key wired.lan.zone Kwired.lan.+008+63324.key

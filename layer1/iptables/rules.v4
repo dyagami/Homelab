@@ -1,0 +1,50 @@
+*filter
+:INPUT DROP [0:0]
+:FORWARD DROP [0:0]
+:OUTPUT DROP [0:0]
+# LOCAL SERVICES
+-A INPUT -s localhost -j ACCEPT
+-A OUTPUT -s localhost -j ACCEPT
+# SSH
+-A INPUT -s **REDACTED** -p tcp -m tcp --dport 22 -j ACCEPT
+-A OUTPUT -d **REDACTED** -p tcp -m tcp --dport 22 -j ACCEPT
+# DNS
+-A INPUT -s 192.168.0.202,192.168.0.0/24 -p udp -m udp --dport 53 -j ACCEPT
+-A INPUT -s 192.168.0.202,192.168.0.0/24 -p tcp -m tcp --dport 53 -j ACCEPT
+-A OUTPUT -d 192.168.0.202,192.168.0.0/24 -p tcp -m tcp --dport 53 -j ACCEPT
+-A OUTPUT -d 192.168.0.202,192.168.0.0/24 -p udp -m udp --dport 53 -j ACCEPT
+# ICMP-REDIRECT
+-A INPUT -p icmp -m icmp --icmp-type 5 -j DROP
+-A OUTPUT -p icmp -m icmp --icmp-type 5 -j DROP
+# ICMP-INFORMATION-REQUEST
+-A INPUT -p icmp -m icmp --icmp-type 15 -j DROP
+# ICMP-INFORMATION-REPLY
+-A OUTPUT -p icmp -m icmp --icmp-type 16 -j DROP
+# ECHO-REPLY
+-A INPUT -s 192.168.0.202,**REDACTED** -p icmp -m icmp --icmp-type 0 -j ACCEPT
+-A OUTPUT -d 192.168.0.202,**REDACTED** -p icmp -m icmp --icmp-type 0 -j ACCEPT
+# ECHO-REQUEST
+-A INPUT -s 192.168.0.202,**REDACTED** -p icmp -m icmp --icmp-type 8 -j ACCEPT
+-A OUTPUT -d 192.168.0.202,**REDACTED** -p icmp -m icmp --icmp-type 8 -j ACCEPT
+# DESTINATION-UNREACHABLE
+-A INPUT -s 192.168.0.202,**REDACTED** -p icmp -m icmp --icmp-type 3 -j ACCEPT
+-A OUTPUT -d 192.168.0.0/24 -p icmp -m icmp --icmp-type 3 -j ACCEPT
+# TIME-EXCEEDED
+-A INPUT -s 192.168.0.202,**REDACTED** -p icmp -m icmp --icmp-type 11 -j ACCEPT
+-A OUTPUT -d 192.168.0.202,**REDACTED** -p icmp -m icmp --icmp-type 11 -j ACCEPT
+# PARAMETER-PROBLEM
+-A INPUT -s 192.168.0.202,**REDACTED** -p icmp -m icmp --icmp-type 12 -j ACCEPT
+-A OUTPUT -d 192.168.0.202,**REDACTED** -p icmp -m icmp --icmp-type 12 -j ACCEPT
+# SOURCE-QUENCH
+-A INPUT -s 192.168.0.202,**REDACTED** -p icmp -m icmp --icmp-type 4 -j ACCEPT
+-A OUTPUT -d 192.168.0.202,**REDACTED** -p icmp -m icmp --icmp-type 4 -j ACCEPT
+# STATEFUL INSPECTION
+-A INPUT -s 192.168.0.202,**REDACTED** -m state --state ESTABLISHED -j ACCEPT
+-A OUTPUT -d 192.168.0.202,**REDACTED** -m state --state ESTABLISHED -j ACCEPT
+# LDAP AND LDAPS
+-A INPUT -s 192.168.0.202,192.168.0.203 -p tcp -m tcp --dport 389 -j ACCEPT
+-A INPUT -s 192.168.0.202,192.168.0.203 -p tcp -m tcp --dport 636 -j ACCEPT
+-A OUTPUT -d 192.168.0.202,192.168.0.203 -p tcp -m tcp --dport 389 -j ACCEPT
+-A OUTPUT -d 192.168.0.202,192.168.0.203 -p tcp -m tcp --dport 636 -j ACCEPT
+
+COMMIT

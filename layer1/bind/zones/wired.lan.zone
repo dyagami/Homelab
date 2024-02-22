@@ -1,0 +1,48 @@
+$ORIGIN wired.lan.
+$TTL 1d
+@	IN	SOA	wired.lan. root.wired.lan. (
+			     21		; Serial
+			   3600		; Refresh
+			    300		; Retry
+			   3600		; Expire
+			   7200 )	; Negative Cache TTL
+
+@	IN      NS      ns2.wired.lan.
+@	IN	NS	ns1.wired.lan.
+@	IN	A	192.168.0.206
+@	IN	AAAA	fdc2:b7a9:3adc::
+www	IN	A	192.168.0.206
+www	IN	AAAA	fdc2:b7a9:3adc::
+ns1	IN	A	192.168.0.201
+ns1	IN	AAAA	fd46:e022:f3e4::
+ns2	IN	A	192.168.0.202
+ns2	IN	AAAA	fd44:44e5:32b6::
+layer0	IN	A	192.168.0.200
+layer0	IN	AAAA	fd1c:f159:ee12::
+layer1	IN	A	192.168.0.201
+layer1	IN	AAAA	fd46:e022:f3e4::
+layer2	IN	A	192.168.0.202
+layer2	IN	AAAA	fd44:44e5:32b6::
+layer3	IN	A	192.168.0.203
+layer3	IN	AAAA	fdb1:6eac:1cd0::
+layer4	IN	A	192.168.0.210
+layer4	IN	AAAA	fd12:b512:c627::
+layer5	IN	A	192.168.0.205
+layer5	IN	AAAA	fd68:3667:32ed::
+layer6	IN	A	192.168.0.207
+layer6	IN	AAAA	fdba:e7ee:4b28::
+blog	IN	A	192.168.0.205
+blog	IN	AAAA	fd68:3667:32ed::
+dc	IN	A	192.168.0.203
+dc	IN	AAAA	fdb1:6eac:1cd0::
+navi	IN	A	192.168.0.207
+navi	IN	AAAA	fdba:e7ee:4b28::
+**REDACTED**	IN	A	**REDACTED**
+**REDACTED**	IN	AAAA	**REDACTED**
+**REDACTED**	IN	A	**REDACTED**
+**REDACTED**	IN	AAAA	**REDACTED**
+ldap	IN	A	192.168.0.210
+ldap	IN	AAAA	fd12:b512:c627::
+
+$include Kwired.lan.+008+15979.key
+$include Kwired.lan.+008+63324.key

@@ -1,0 +1,14 @@
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: ens18 ens19
+  sources: 192.168.0.0/24
+  services: cockpit dhcpv6-client dns http ldap ldaps ssh
+  ports: 
+  protocols: 
+  forward: yes
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 

@@ -1,0 +1,25 @@
+;
+; BIND data file for local loopback interface
+;
+$ORIGIN .
+$TTL	1h
+lan	IN	SOA	lan. root.lan. (
+			      8		; Serial
+			     1h		; Refresh
+			     1h		; Retry
+			     7d		; Expire
+			     1d )	; Negative Cache TTL
+;
+$TTL 1d
+$ORIGIN lan.
+@	IN	NS	ns.lan.
+ns	IN	A	192.168.0.201
+ns 	IN	AAAA	fd46:e022:f3e4::
+ns1.wired.lan.	IN	A	192.168.0.201
+ns1.wired.lan.	IN	AAAA	fd46:e022:f3e4::
+ns2.wired.lan.	IN	A	192.168.0.202
+ns2.wired.lan.	IN	AAAA	fd44:44e5:32b6::
+wired.lan.	IN	A	192.168.0.206
+wired.lan.	IN	AAAA	fdc2:b7a9:3adc::
+$include Klan.+008+65234.key
+$include Klan.+008+15180.key
