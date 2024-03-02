@@ -3,16 +3,16 @@
 :FORWARD DROP [0:0]
 :OUTPUT DROP [0:0]
 # LOCAL SERVICES
--A INPUT -s localhost -j ACCEPT
--A OUTPUT -s localhost -j ACCEPT
+-A INPUT -s localhost,192.168.0.201 -j ACCEPT
+-A OUTPUT -s localhost,192.168.0.201 -j ACCEPT
 # SSH
 -A INPUT -s **REDACTED** -p tcp -m tcp --dport 22 -j ACCEPT
 -A OUTPUT -d **REDACTED** -p tcp -m tcp --dport 22 -j ACCEPT
 # DNS
--A INPUT -s 192.168.0.202,192.168.0.0/24 -p udp -m udp --dport 53 -j ACCEPT
--A INPUT -s 192.168.0.202,192.168.0.0/24 -p tcp -m tcp --dport 53 -j ACCEPT
--A OUTPUT -d 192.168.0.202,192.168.0.0/24 -p tcp -m tcp --dport 53 -j ACCEPT
--A OUTPUT -d 192.168.0.202,192.168.0.0/24 -p udp -m udp --dport 53 -j ACCEPT
+-A INPUT -s 192.168.0.0/24 -p udp -m udp --dport 53 -j ACCEPT
+-A INPUT -s 192.168.0.0/24 -p tcp -m tcp --dport 53 -j ACCEPT
+-A OUTPUT -d 192.168.0.0/24 -p tcp -m tcp --dport 53 -j ACCEPT
+-A OUTPUT -d 192.168.0.0/24 -p udp -m udp --dport 53 -j ACCEPT
 # ICMP-REDIRECT
 -A INPUT -p icmp -m icmp --icmp-type 5 -j DROP
 -A OUTPUT -p icmp -m icmp --icmp-type 5 -j DROP

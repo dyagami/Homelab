@@ -9,8 +9,11 @@ Things already done:
 
 Things WIP:
 - LDAP Multi-Supplier, HUB and Consumer environment with 389-DS and AD synchronization (Still reading through that RHEL DS documentation - great knowledge base btw.)
+	* AD synchronization done
 
-Things To-Do in future:
+Things To-Do:
+- SSSD authentication via LDAP on every host
+- Cloud OpenVPN server for host-to-site connections
 - Mail Server
 - Centralized Log Server
 
