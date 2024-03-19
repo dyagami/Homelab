@@ -14,5 +14,21 @@ $TTL	1d
 201	IN	PTR	ns1.wired.lan.
 202	IN	PTR	ns2.wired.lan.
 206	IN	PTR	wired.lan.
+200     IN      PTR     layer0.wired.lan.
+201     IN      PTR     layer1.wired.lan.
+202     IN      PTR     layer2.wired.lan.
+203     IN      PTR     layer3.wired.lan.
+210     IN      PTR     layer4.wired.lan.
+205     IN      PTR     layer5.wired.lan.
+207     IN      PTR     layer6.wired.lan.
+205     IN      PTR     blog.wired.lan.
+203     IN      PTR     dc.wired.lan.
+207     IN      PTR     navi.wired.lan.
+***     IN      PTR     **REDACTED**
+***     IN      PTR     **REDACTED**
+201     IN      PTR     ldap1.wired.lan.
+203     IN      PTR     ldap2.wired.lan.
+202     IN      PTR     ldaphub.wired.lan.
+210     IN      PTR     ldapc.wired.lan.
 $include K0.168.192.in-addr.arpa.+008+41411.key
 $include K0.168.192.in-addr.arpa.+008+59905.key

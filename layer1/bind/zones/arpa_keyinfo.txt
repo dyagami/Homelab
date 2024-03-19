@@ -1,0 +1,11 @@
+K0.168.192.in-addr.arpa.+008+41411.key - KSK
+Created: 20240125233852 (Thu Jan 25 23:38:52 2024)
+Publish: 20240125233852 (Thu Jan 25 23:38:52 2024)
+Activate: 20240125233852 (Thu Jan 25 23:38:52 2024)
+
+K0.168.192.in-addr.arpa.+008+59905.key - ZSK
+Created: 20240125233836 (Thu Jan 25 23:38:36 2024)
+Publish: 20240125233836 (Thu Jan 25 23:38:36 2024)
+Activate: 20240125233836 (Thu Jan 25 23:38:36 2024)
+
+dnssec-signzone -o 0.168.192.in-addr.arpa -e 20241231235959 -N increment -k  K0.168.192.in-addr.arpa.+008+41411.key 0.168.192.in-addr.arpa K0.168.192.in-addr.arpa.+008+59905.key

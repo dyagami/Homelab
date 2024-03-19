@@ -1,0 +1,33 @@
+;
+; BIND data file for local loopback interface
+;
+$ORIGIN 0.101.10.in-addr.arpa.
+$TTL	1d
+@	IN	SOA	wired.lan. ns1.wired.lan. (
+                              9         ; Serial
+                           3600         ; Refresh
+                            300         ; Retry
+                           3600         ; Expire
+                           7200 )       ; Negative Cache TTL
+@	IN	NS	ns1.wired.lan.
+@	IN	NS	ns2.wired.lan.
+201	IN	PTR	ns1.wired.lan.
+202	IN	PTR	ns2.wired.lan.
+202	IN	PTR	wired.lan.
+202	IN	PTR	www.wired.lan.
+200	IN	PTR	layer0.wired.lan.
+201	IN	PTR	layer1.wired.lan.
+202	IN	PTR	layer2.wired.lan.
+203	IN	PTR	layer3.wired.lan.
+210	IN	PTR	layer4.wired.lan.
+205	IN	PTR	layer5.wired.lan.
+207	IN	PTR	layer6.wired.lan.
+205	IN	PTR	blog.wired.lan.
+203	IN	PTR	dc.wired.lan.
+207	IN	PTR	navi.wired.lan.
+***	IN	PTR	**REDACTED**
+***	IN	PTR	**REDACTED**
+201	IN	PTR	ldap1.wired.lan.
+203	IN	PTR	ldap2.wired.lan.
+202	IN	PTR	ldaphub.wired.lan.
+210	IN	PTR	ldapc.wired.lan.

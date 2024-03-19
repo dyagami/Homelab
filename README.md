@@ -6,6 +6,8 @@ Things already done:
 - Windows Server 2022 installation with Active Directory and Samba share (it's great how it can be accessed from Android devices too - makes file transfer so much easier)
 - Windows 11 Enterprise domain-connected installation with multi-session RDP accessible from within the LAN using AD credentials
 - Two small web servers, one for SLD domain and second for a blog subdomain
+- Remote Access to all servers via Netmaker front-end VPN network hosted on VPC
+- Split-Horizon DNS configuration to resolve home domain names when connected from outside via Netmaker Tunnel
 
 Things WIP:
 - LDAP Multi-Supplier, HUB and Consumer environment with 389-DS and AD synchronization (Still reading through that RHEL DS documentation - great knowledge base btw.)
@@ -13,7 +15,6 @@ Things WIP:
 
 Things To-Do:
 - SSSD authentication via LDAP on every host
-- Cloud OpenVPN server for host-to-site connections
 - Mail Server
 - Centralized Log Server
 
