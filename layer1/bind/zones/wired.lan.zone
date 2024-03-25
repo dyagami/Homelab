@@ -31,16 +31,20 @@ layer5	IN	A	192.168.0.205
 layer5	IN	AAAA	fd68:3667:32ed::
 layer6	IN	A	192.168.0.207
 layer6	IN	AAAA	fdba:e7ee:4b28::
+layer7  IN      A       192.168.0.211
+layer7  IN      AAAA    fd6b:7384:d0ac::
+layer7  IN      A       192.168.0.212
+layer7  IN      AAAA    fd17:1694:a8e4::
 blog	IN	A	192.168.0.205
 blog	IN	AAAA	fd68:3667:32ed::
 dc	IN	A	192.168.0.203
 dc	IN	AAAA	fdb1:6eac:1cd0::
 navi	IN	A	192.168.0.207
 navi	IN	AAAA	fdba:e7ee:4b28::
-**REDACTED**	IN	A	**REDACTED**
-**REDACTED**	IN	AAAA	**REDACTED**
-**REDACTED**	IN	A	**REDACTED**
-**REDACTED**	IN	AAAA	**REDACTED**
+***	IN	A	**REDACTED**
+***	IN	AAAA	**REDACTED**
+***	IN	A	**REDACTED**
+***	IN	AAAA	**REDACTED**
 ldap1	IN	A	192.168.0.201
 ldap1	IN	AAAA	fd46:e022:f3e4::
 ldap2	IN	A	192.168.0.203
@@ -49,6 +53,12 @@ ldabhub	IN	A	192.168.0.202
 ldaphub	IN	AAAA	fd44:44e5:32b6::
 ldapc	IN	A	192.168.0.210
 ldapc	IN	AAAA	fd12:b512:c627::
+kali	IN	A	192.168.0.211
+kali	IN	AAAA	fd6b:7384:d0ac::
+parrot	IN	A	192.168.0.212
+parrot	IN	AAAA	fd17:1694:a8e4::
+***	IN      A       **REDACTED**
+***	IN      AAAA    **REDACTED**
 
 $include Kwired.lan.+008+15979.key
 $include Kwired.lan.+008+63324.key

@@ -22,6 +22,8 @@ $TTL	1d
 210	IN	PTR	layer4.wired.lan.
 205	IN	PTR	layer5.wired.lan.
 207	IN	PTR	layer6.wired.lan.
+211	IN	PTR	layer7.wired.lan.
+212	IN	PTR	layer8.wired.lan.
 205	IN	PTR	blog.wired.lan.
 203	IN	PTR	dc.wired.lan.
 207	IN	PTR	navi.wired.lan.
@@ -31,3 +33,6 @@ $TTL	1d
 203	IN	PTR	ldap2.wired.lan.
 202	IN	PTR	ldaphub.wired.lan.
 210	IN	PTR	ldapc.wired.lan.
+211	IN	PTR	kali.wired.lan.
+212	IN	PTR	parrot.wired.lan.
+***	IN	PTR	**REDACTED**
